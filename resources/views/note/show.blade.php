@@ -7,7 +7,9 @@
 
     <div class="py-12 px-20">
 
-        {{ $note->body }}
+        Content : {{ $note->body }}
+        <br>
+        Created at : {{ $note->created_at }}
 
     </div>
 </x-app-layout>

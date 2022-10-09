@@ -22,7 +22,7 @@
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Body
                     </th>
 
@@ -33,7 +33,8 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @forelse($notes as $note)
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">{{$note->id}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap"> <a href="{{Request::url()}}/{{$note->id}}"
+                            class="text-blue-500"> {{Request::url()}}/{{$note->id}} </a></td>
                     <td class="px-6 py-4 whitespace-nowrap">{{$note->body}}</td>
                     <td class="px-6 py-4 whitespace-nowrap">
                         <a href="{{route('note.edit', [$note->id])}}" class="text-blue-500">Edit</a>

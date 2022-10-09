@@ -35,6 +35,7 @@
                             <input type="checkbox" name="is_public" {{ old('is_public') ? 'checked' : '' }}>
 
                         </div>
+                        <br>
                         @error('content')
                         <div class="text-red-600">{{$message}}</div>
                         @enderror
