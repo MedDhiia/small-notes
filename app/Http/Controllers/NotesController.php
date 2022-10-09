@@ -29,8 +29,6 @@ class NotesController extends Controller
      */
     public function create()
     {
-        // $categories = Category::all();
-
         return view("note.add");
     }
 
@@ -63,7 +61,8 @@ class NotesController extends Controller
      */
     public function show($id)
     {
-        //
+        $note = Note::find($id);
+        return view("note.show", compact('note'));
     }
 
     /**
