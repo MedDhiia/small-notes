@@ -21,5 +21,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource("/note", App\Http\Controllers\NotesController::class)->middleware("auth");
+Route::post('comments', [CommentController::class, 'store'])->name('comments.store');
 
 require __DIR__.'/auth.php';
